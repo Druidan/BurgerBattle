@@ -1,0 +1,4 @@
+
+DROP DATABASE IF EXISTS whateverWeNameIt;
+
+CREATE DATABASE whateverWeNameIt;

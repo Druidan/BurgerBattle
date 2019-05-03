@@ -1,0 +1,150 @@
+
+/* 
+-------------------------
+CORE ROOT, DOM, AND GENERAL UTILITY CSS
+------------------------- 
+*/
+
+:root {
+/* We should probably set up some css variables for our color scheme and font families. I would recommend we use coolors.com to figure out a color scheme and google fonts for our fonts. */
+}
+
+body {
+/* If we set up a font size in the body with the "vw" size method, we should be able to keep the rest of the page in relation to one another when we do responsive css by just changing the body font size. At least it worked on my burger homework. */
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:active {
+
+}
+
+.buryIt { /* This class is just here in case we need it. We can use js to add it to and remove it from things we need to add or hide. */
+    display: none !important;
+}
+
+/* 
+-------------------------
+Background and Body CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+Header CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+[Content Section] CSS
+------------------------- 
+*/
+/* I recommend making a new divider for each content section to help us organize our CSS for readability. */
+
+
+@media screen and (min-width: 600px) {
+
+/* 
+-------------------------
+Background and Body CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+Header CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+[Content Section] CSS
+------------------------- 
+*/
+
+}
+
+
+@media screen and (min-width: 900px) {
+
+/* 
+-------------------------
+Background and Body CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+Header CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+[Content Section] CSS
+------------------------- 
+*/
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+/* 
+-------------------------
+Background and Body CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+Header CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+[Content Section] CSS
+------------------------- 
+*/
+
+}
+
+
+@media screen and (min-width: 1800px) {
+
+/* 
+-------------------------
+Background and Body CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+Header CSS
+------------------------- 
+*/
+
+/* 
+-------------------------
+[Content Section] CSS
+------------------------- 
+*/
+
+}
