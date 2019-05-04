@@ -6,7 +6,7 @@
 // =============================================================
 
 // Requiring our model
-const db = require("../models");
+const db = require('../models');
 
 // Routes
 // =============================================================
@@ -14,7 +14,7 @@ const db = require("../models");
 module.exports = function(app) {
 
   // GET route
-  app.get("/api/WhateverWeNameIt/", (req, res) => {
+  app.get('/api/WhateverWeNameIt/', (req, res) => {
 
     db.WhateverWeNameIt.findAll({})
       .then( data => {
@@ -25,7 +25,7 @@ module.exports = function(app) {
   // ------------------
 
   // POST route 
-  app.post("/api/WhateverWeNameIt", (req, res) => {
+  app.post('/api/WhateverWeNameIt', (req, res) => {
 
     db.WhateverWeNameIt.create({
       // stuff goes here
@@ -38,7 +38,7 @@ module.exports = function(app) {
   // ------------------
 
   // PUT route 
-  app.put("/api/WhateverWeNameIt", (req, res) => {
+  app.put('/api/WhateverWeNameIt', (req, res) => {
 
     db.WhateverWeNameIt.update(req.body,
       {
@@ -54,7 +54,7 @@ module.exports = function(app) {
   // ------------------
 
   // DELETE route 
-  app.delete("/api/WhateverWeNameIt/:id", (req, res) => {
+  app.delete('/api/WhateverWeNameIt/:id', (req, res) => {
 
     db.WhateverWeNameIt.destroy({
       where: {
