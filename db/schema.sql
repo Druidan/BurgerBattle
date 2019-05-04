@@ -1,4 +1,4 @@
 
-DROP DATABASE IF EXISTS whateverWeNameIt;
+DROP DATABASE IF EXISTS burgerRoster;
 
-CREATE DATABASE whateverWeNameIt;
+CREATE DATABASE burgerRoster;

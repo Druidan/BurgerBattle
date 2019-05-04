@@ -1,5 +1,7 @@
-# project-2
-This repository will hold our project for the second project of the boot camp. The title and this text should be replaced with our project title and our description.
+# Burger Battle
+Have you ever had a hard time choosing which burger you wanted to eat? Yeah, that's normal. Ever wanted to smash two burgers against eachother and see which one comes out on top? Well, that's not quite normal, per se, but we're here to meet that demand!
+
+Welcome to Burger Battle! Choose your favorite burger by pitting one burger against another in a struggle for the title of Buger Battle Champion!
 
 ## Overview and Goals
 
@@ -9,7 +11,10 @@ _Where we will be deployed - probably Heroku, but maybe Zeit if that works for o
 
 ## MVP
 As our app is run, it must be able to do the following:
-* 
+* A user is presented with a welcome screen / Introduction to the concept of the Burger Fight, and a button to start the tournament.
+* When the start button is clicked, the user is presented with two burgers, and the user selects the one they prefer (by clicking the burger itself or some other button, etc.)
+* The burger they did not select is replaced by the next burger, and the user is prompted again to choose their favorite between the two. This process repeats until the user has chosen their favorite burger.
+* The user’s favorite burger is presented to them as the champion burger and the “All-Time Champion” burger. It also shows them where their favorite burger ranks on the overall ranking.
 
 ## Dependancies
 We will be using the following NPM for our app:
@@ -22,4 +27,6 @@ We will be using the following NPM for our app:
 
 ##Future Features
 Once our MVP is done...
-* 
+* The ability on the end screen to click a button and view the full rankings of all the burgers.
+* The ability for a user to Log in and keep track of their burger rankings.
+* Beer Pairing?
