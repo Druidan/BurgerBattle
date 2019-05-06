@@ -13,7 +13,7 @@
         "ecmaVersion": 2018
     },
     "rules": {
-        "func-names": "as-needed",
+        "func-names": ["error", "as-needed"],
         "allowTemplateLiterals": true
     }
 }
