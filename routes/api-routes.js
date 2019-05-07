@@ -17,13 +17,13 @@ module.exports = function(app) {
   app.get('/api/burgerRoster/', (req, res) => {
     db.Burgers.findAll({
       include: [
-        // {
-        //   model: db.Condiments,
-        //   as: 'Condiments',
-        //   required: false,
-        //   attributes: ['id', 'name'],
-        //   through: { attributes: [] }
-        // },
+        {
+          model: db.Condiments,
+          as: 'Condiments',
+          required: false,
+          attributes: ['id', 'name'],
+          through: { attributes: [] }
+        },
         {
           model: db.Breads,
           as: 'Breads',

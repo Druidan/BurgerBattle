@@ -2,7 +2,7 @@ module.exports = function (sequelize, DataTypes) {
     //-----------------
 
     const burgerMeaties = sequelize.define('burgerMeaties', {
-        trueBurgerId:{
+        burgerId:{
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
