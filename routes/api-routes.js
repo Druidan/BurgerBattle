@@ -45,6 +45,14 @@ module.exports = function(app) {
       })
   })
 
+  //GET route for all meat data
+  app.get('/api/burgerRoster/meatData', (req, res) => {
+    db.burgerMeaties.findAll({})
+      .then((meatData) => {
+        res.json(meatData);
+      })
+  })
+
   // GET route for a specific burger.
   app.get('/api/burgerRoster/:id', (req, res) => {
     db.Burgers.findAll({

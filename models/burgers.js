@@ -18,27 +18,17 @@ module.exports = function(sequelize, DataTypes) {
   Burgers.associate = models => {
     Burgers.belongsToMany(models.Condiments, {
       through: "burgerCondiments",
-      as: "Condiments",
-      foreignKey: "burgerId"
+      foreignKey: "burger_id"
     });
     Burgers.belongsToMany(models.Breads, {
       through: "burgerBreads",
-      as: "Breads",
-      foreignKey: "burgerId"
+      foreignKey: "burger_id"
     });
-    // Burgers.belongsToMany(models.Meats, {
-    //   through: "burgerMeaties",
-    //   as: "Meats",
-    //   foreignKey: "burgerId"
-    // });
+    Burgers.belongsToMany(models.Meats, {
+      through: "burgerMeats",
+      foreignKey: "burger_id"
+    });
   };
-  //-----------------
-
-  // Burgers.associate = (models) => {
-  //     Burgers.hasMany(models.Condiments);
-  //     Burgers.hasMany(models.Breads);
-  //     Burgers.hasMany(models.Meats);
-  // };
   //-----------------
 
   return Burgers;

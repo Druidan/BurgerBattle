@@ -1,22 +1,20 @@
-// module.exports = function (sequelize, DataTypes) {
-//     //-----------------
+module.exports = function (sequelize, DataTypes) {
+    //-----------------
 
-//     const Meats = sequelize.define('Meats', {
-//         name: DataTypes.STRING,
-//     });
-//     //-----------------
+    const Meats = sequelize.define('Meats', {
+        name: DataTypes.STRING,
+    });
+    //-----------------
 
-//     Meats.associate = (models) => {
-//         Meats.belongsToMany(models.Meats, {
-//             through: 'burgerMeats',
-//             as: 'Burgers',
-//             foreignKey: 'meatId',
-//             // onDelete: 'cascade'
-//         });
-//     };
-//     //-----------------
+    Meats.associate = (models) => {
+        Meats.belongsToMany(models.Burgers, {
+            through: 'burgerMeats',
+            foreignKey: 'meat_id'
+        });
+    };
+    //-----------------
 
-//     return Meats;
-// };
+    return Meats;
+};
 
-// // *********************************************************************************
+// *********************************************************************************
