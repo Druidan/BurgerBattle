@@ -23,9 +23,14 @@ module.exports = {
             meat_id: 4,
             createdAt: new Date(),
             updatedAt: new Date(),
-        },{
+        },{  // The Loaded Angus Steakhouse Burger
             burger_id: 5,
             meat_id: 3,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        },{
+            burger_id: 5,
+            meat_id: 13,
             createdAt: new Date(),
             updatedAt: new Date(),
         },{
@@ -63,9 +68,14 @@ module.exports = {
             meat_id: 4,
             createdAt: new Date(),
             updatedAt: new Date(),
-        },{
+        },{ // The California Burger
             burger_id: 13,
             meat_id: 4,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        },{
+            burger_id: 13,
+            meat_id: 13,
             createdAt: new Date(),
             updatedAt: new Date(),
         },{
@@ -98,9 +108,19 @@ module.exports = {
             meat_id: 7,
             createdAt: new Date(),
             updatedAt: new Date(),
-        },{
+        },{ // Curry Burger
             burger_id: 19,
             meat_id: 4,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        },{
+            burger_id: 19,
+            meat_id: 14,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        },{
+            burger_id: 19,
+            meat_id: 15,
             createdAt: new Date(),
             updatedAt: new Date(),
         },{
@@ -143,14 +163,14 @@ module.exports = {
             meat_id: 4,
             createdAt: new Date(),
             updatedAt: new Date(),
-        },{
+        },{ // Kimchi Burger
             burger_id: 26,
-            meat_id: 10,
+            meat_id: 4,
             createdAt: new Date(),
             updatedAt: new Date(),
         },{
             burger_id: 26,
-            meat_id: 11,
+            meat_id: 7,
             createdAt: new Date(),
             updatedAt: new Date(),
         },{
@@ -166,6 +186,11 @@ module.exports = {
         },{
             burger_id: 28,
             meat_id: 3,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        },{
+            burger_id: 28,
+            meat_id: 16,
             createdAt: new Date(),
             updatedAt: new Date(),
         },], {});

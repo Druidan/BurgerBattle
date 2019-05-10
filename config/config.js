@@ -1,7 +1,10 @@
-{
+require('dotenv').config(); 
+
+module.exports = {
     "development": {
         "username": "root",
-        "password": "4HorseN4m3dJ1m!",
+        "password": process.env.MPASS,
+        "logging": true,
         "database": "burgerRoster",
         "host": "127.0.0.1",
         "port": 3306,

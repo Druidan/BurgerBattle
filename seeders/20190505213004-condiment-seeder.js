@@ -147,7 +147,23 @@ module.exports = {
         name: 'mushrooms',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },], {});
+      },{ // 37
+        name: 'curry powder',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{ // 38
+        name: 'sliced bell pepper',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{ // 39
+        name: 'provolone cheese',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{ // 40
+        name: 'cilantro',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }], {});
   },
 
   down: (queryInterface, Sequelize) => {
