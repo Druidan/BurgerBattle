@@ -59,36 +59,35 @@ module.exports = function (app) {
   // PUT route
   app.put('/api/burgerRoster/', (req, res) => { // When the update request is sent to the api...
     // We are recieving an array of key value pairs with an id and an integer to add to the previous burger score.
-    const burgerArr = req.body; 
+    const burgersObj = req.body;
 
     // We take our recieved arrar and make a get call and then update call on each burger.
-    burgerArr.foreach(burger => {
+    for (burger in burgersObj) {
 
-      const addToScore = burger.score; // We identify the burger's id with a variable.
-      const burgerURL = `/api/burgerRoster/${burger.id}` // We establish a URL for our GET call using the burger id.
+      const addToScore = burgersObj[burger]; // We identify the integer we are adding to the score with a variable.
+      const burgerURL = `/api/burgerRoster/${burger}` // We establish a URL for our GET call using the burger id.
 
       $.ajax({ // We make a call to our API for a specific burger.
         url: burgerURL,
         method: "GET"
-      }).then(response => {
+      }).then(oldBurger => {
 
         //We establish the burger's original score
-        const ogBurgerScore = response.score;
+        const ogBurgerScore = oldBurger.score;
         const newBurgerScore = ogBurgerScore + addToScore; // We create a new score by adding the integer we recieved.
-        burger.score = newBurgerScore; // We declare the new score value as part of the burger.
+        oldBurger.score = newBurgerScore;
 
         // We make the update call to the database for that specific burger using its ID.
-        db.Burgers.update(burger.score, { 
+        db.Burgers.update(oldBurger, {
             where: {
-              id: burger.id,
+              id: burger,
             },
           })
           .then((upData) => {
             res.json(upData);
           });
       })
-
-    });
+    };
   });
   // ------------------
 
