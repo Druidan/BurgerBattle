@@ -7,11 +7,9 @@ module.exports = function (sequelize, DataTypes) {
     //-----------------
 
     Meats.associate = (models) => {
-        Meats.belongsToMany(models.Meats, {
+        Meats.belongsToMany(models.Burgers, {
             through: 'burgerMeats',
-            as: 'Burgers',
-            foreignKey: 'meatId',
-            // onDelete: 'cascade'
+            foreignKey: 'meat_id'
         });
     };
     //-----------------

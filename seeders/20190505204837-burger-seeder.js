@@ -35,19 +35,19 @@ module.exports = {
       updatedAt: new Date(),
     }, {
       name: 'The Wisconsin Butter Burger',
-      specialNotes: 'Every part of the burger is cooked in butter on a stove top.',
+      specialNotes: 'Every part of the burger, from the onions, to the meat patty, to the bun, is cooked in butter on a stove top.',
       picURL: './assets/images/butterburger.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
       name: 'Classic Cheese Burger',
-      specialNotes: null,
+      specialNotes: "The cheese of a cheeseburger is usually laid atop the patty as it cooks near the end of the process so that the cheese can melt onto the patty. While American Cheese is typical, a wide variety of cheeses can be added to a cheeseburger.",
       picURL: './assets/images/cheeseburger.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
       name: 'Luther Burger',
-      specialNotes: null,
+      specialNotes: "While the Luther Burger is not very unlike a classic cheeseburger on the inside, with this burger its what's on the outside that counts - two halves of a glazed doghnut.",
       picURL: './assets/images/lutherburger.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -59,7 +59,7 @@ module.exports = {
       updatedAt: new Date(),
     }, {
       name: 'Chili Burger',
-      specialNotes: null,
+      specialNotes: "This burger is also sometimes served open-faced and eaten with a knife and fork.",
       picURL: './assets/images/chiliburger.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -83,7 +83,7 @@ module.exports = {
       updatedAt: new Date(),
     }, {
       name: 'Hamdog',
-      specialNotes: "A combination of hotdog and burger first made in Australia.",
+      specialNotes: "A combination of hotdog and burger, with the meat deep-fried, first made in Australia.",
       picURL: './assets/images/hamdog.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -111,7 +111,7 @@ module.exports = {
       picURL: './assets/images/salmonburger.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
-    }, {
+    }, { // 19
       name: 'Curry Burger',
       specialNotes: null,
       picURL: './assets/images/curryburger.jpg',
