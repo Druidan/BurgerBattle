@@ -9,24 +9,24 @@ body {
     font-size: 3vw;
     text-align: center;
     font-family: var(--standardFontFamily);
-    }
+}
 
 :root {
-        --primary: #F3F3F3;
-        --secondary: #A50104;
-        --tertiary: #250001;
-        --highlight: #ffee02;
-        --highlight2: #ff9900;
-        --fontStandardColor: #FCBA04;
-        --font-title: 'Shojumaru', cursive;
-        --font-header: 'Ceviche One', cursive;
-        --font-body: 'Happy Monkey', cursive;
-    }
+    --primary: #F3F3F3;
+    --secondary: #A50104;
+    --tertiary: #250001;
+    --highlight: #ffee02;
+    --highlight2: #ff9900;
+    --fontStandardColor: #FCBA04;
+    --font-title: 'Shojumaru', cursive;
+    --font-header: 'Ceviche One', cursive;
+    --font-body: 'Happy Monkey', cursive;
+}
 
 .card-body {
     background: #A50104;
     color: #ff9900;
-   
+
 }
 
 .test {
@@ -37,6 +37,7 @@ body {
 .burger-battle-title {
     font-family: var(--font-title);
 }
+
 .battle-discription {
     font-family: var(--font-body);
     font-size: 20px;

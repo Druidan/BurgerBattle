@@ -1,4 +1,3 @@
-
 /* 
 -------------------------
 CORE ROOT, DOM, AND GENERAL UTILITY CSS
@@ -6,11 +5,11 @@ CORE ROOT, DOM, AND GENERAL UTILITY CSS
 */
 
 :root {
-/* We should probably set up some css variables for our color scheme and font families. I would recommend we use coolors.com to figure out a color scheme and google fonts for our fonts. */
+    /* We should probably set up some css variables for our color scheme and font families. I would recommend we use coolors.com to figure out a color scheme and google fonts for our fonts. */
 }
 
 body {
-/* If we set up a font size in the body with the "vw" size method, we should be able to keep the rest of the page in relation to one another when we do responsive css by just changing the body font size. At least it worked on my burger homework. */
+    /* If we set up a font size in the body with the "vw" size method, we should be able to keep the rest of the page in relation to one another when we do responsive css by just changing the body font size. At least it worked on my burger homework. */
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
@@ -22,19 +21,14 @@ a, button {
     cursor: pointer;
 }
 
-a:link {
+a:link {}
 
-}
+a:visited {}
 
-a:visited {
+a:active {}
 
-}
-
-a:active {
-
-}
-
-.buryIt { /* This class is just here in case we need it. We can use js to add it to and remove it from things we need to add or hide. */
+.buryIt {
+    /* This class is just here in case we need it. We can use js to add it to and remove it from things we need to add or hide. */
     display: none !important;
 }
 
@@ -52,8 +46,9 @@ Header CSS
 
 .noScroll {
     overflow: hidden;
-    position:fixed;
+    position: fixed;
 }
+
 header {
     position: relative;
     background-color: black;
@@ -62,7 +57,7 @@ header {
     width: 100vw;
     overflow: hidden;
 }
-    
+
 header video {
     position: absolute;
     top: 50%;
@@ -77,12 +72,12 @@ header video {
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
-    
+
 header .container {
     position: relative;
     z-index: 2;
 }
-    
+
 header .overlay {
     position: absolute;
     top: 0;
@@ -93,10 +88,12 @@ header .overlay {
     opacity: 0.5;
     z-index: 1;
 }
+
 @media (pointer: coarse) and (hover: none) {
     header {
         background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
     }
+
     header video {
         display: none;
     }
@@ -113,17 +110,17 @@ h1 {
 
 html,
 body {
-height: 100%;
-width:100%;
-margin:0;
-padding:0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Other Classes for Page Styling */
 
 body {
-background: black;
-background: linear-gradient(to right, rgb(83, 10, 10), rgb(230, 135, 80));
+    background: black;
+    background: linear-gradient(to right, rgb(83, 10, 10), rgb(230, 135, 80));
 }
 
 .intro {
@@ -136,23 +133,29 @@ background: linear-gradient(to right, rgb(83, 10, 10), rgb(230, 135, 80));
     flex-wrap: wrap;
     margin: auto;
     position: absolute;
-    z-index:10;
-    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
-.container{
+
+.container {
     align-content: center;
 }
 
-.test{
+.test {
     background: white;
     padding: 5vw;
     border-radius: 25px;
 
 }
+
 button {
     color: #e9ec16;
-    background-color:red;
-    }
+    background-color: red;
+}
+
 /* 
 -------------------------
 [Content Section] CSS
@@ -163,19 +166,19 @@ button {
 
 @media screen and (min-width: 600px) {
 
-/* 
+    /* 
 -------------------------
 Background and Body CSS
 ------------------------- 
 */
 
-/* 
+    /* 
 -------------------------
 Header CSS
 ------------------------- 
 */
 
-/* 
+    /* 
 -------------------------
 [Content Section] CSS
 ------------------------- 
@@ -186,19 +189,19 @@ Header CSS
 
 @media screen and (min-width: 900px) {
 
-/* 
+    /* 
 -------------------------
 Background and Body CSS
 ------------------------- 
 */
 
-/* 
+    /* 
 -------------------------
 Header CSS
 ------------------------- 
 */
 
-/* 
+    /* 
 -------------------------
 [Content Section] CSS
 ------------------------- 
@@ -209,19 +212,19 @@ Header CSS
 
 @media screen and (min-width: 1200px) {
 
-/* 
+    /* 
 -------------------------
 Background and Body CSS
 ------------------------- 
 */
 
-/* 
+    /* 
 -------------------------
 Header CSS
 ------------------------- 
 */
 
-/* 
+    /* 
 -------------------------
 [Content Section] CSS
 ------------------------- 
@@ -232,19 +235,19 @@ Header CSS
 
 @media screen and (min-width: 1800px) {
 
-/* 
+    /* 
 -------------------------
 Background and Body CSS
 ------------------------- 
 */
 
-/* 
+    /* 
 -------------------------
 Header CSS
 ------------------------- 
 */
 
-/* 
+    /* 
 -------------------------
 [Content Section] CSS
 ------------------------- 
