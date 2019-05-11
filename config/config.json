@@ -1,9 +1,9 @@
 {
     "development": {
         "username": "root",
-        "password": "4HorseN4m3dJ1m!",
+        "password": "",
         "database": "burgerRoster",
-        "host": "127.0.0.1",
+        "host": "localhost",
         "port": 3306,
         "dialect": "mysql"
     },

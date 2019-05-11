@@ -1,35 +1,37 @@
 {
-  "name": "project-2",
-  "version": "1.0.0",
-  "description": "This repository will hold our project for the second project of the boot camp.",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Druidan/project-2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Druidan/project-2/issues"
-  },
-  "homepage": "https://github.com/Druidan/project-2#readme",
-  "dependencies": {
-    "dotenv": "^8.0.0",
-    "express": "^4.16.4",
-    "mysql2": "^1.6.5",
-    "sequelize": "^5.8.5",
-    "sequelize-cli": "^5.4.0"
-  },
-  "devDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0"
-  }
+    "name": "project-2",
+    "version": "1.0.0",
+    "description": "This repository will hold our project for the second project of the boot camp.",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Druidan/project-2.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Druidan/project-2/issues"
+    },
+    "homepage": "https://github.com/Druidan/project-2#readme",
+    "dependencies": {
+        "dotenv": "^8.0.0",
+        "express": "^4.16.4",
+        "mysql": "^2.17.1",
+        "mysql2": "^1.6.5",
+        "sequelize": "^5.8.5",
+        "sequelize-cli": "^5.4.0"
+    },
+    "devDependencies": {
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.17.2",
+        "eslint-plugin-jsx-a11y": "^6.1.1",
+        "eslint-plugin-react": "^7.11.0"
+    }
 }
