@@ -1,0 +1,43 @@
+body {
+    background: url('../assets/images/battlepage.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-color: var(--tertiary);
+    color: var(--fontStandardColor);
+    font-size: 3vw;
+    text-align: center;
+    font-family: var(--standardFontFamily);
+    }
+
+:root {
+        --primary: #F3F3F3;
+        --secondary: #A50104;
+        --tertiary: #250001;
+        --highlight: #ffee02;
+        --highlight2: #ff9900;
+        --fontStandardColor: #FCBA04;
+        --font-title: 'Shojumaru', cursive;
+        --font-header: 'Ceviche One', cursive;
+        --font-body: 'Happy Monkey', cursive;
+    }
+
+.card-body {
+    background: #A50104;
+    color: #ff9900;
+   
+}
+
+.test {
+    color: #ff9900;
+    font-family: var(--standardFontFamily);
+}
+
+.burger-battle-title {
+    font-family: var(--font-title);
+}
+.battle-discription {
+    font-family: var(--font-body);
+    font-size: 20px;
+}
