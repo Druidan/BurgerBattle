@@ -4,19 +4,24 @@
 
 // Dependencies
 // =============================================================
-const path = require('path');
+/* const path = require('path'); */
 
 // Routes
 // =============================================================\
-
+/* 
 module.exports = function (app) {
-
+ */
   // this route loads index.html
-  app.get('/', (req, res) => {
+ /*  app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
-  });
+  }); */
   // -------------
 
-};
+  /* app.get('/battle', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/battle.html'));
+  }); */
+  // -------------
+
+/* }; */
 
 // *********************************************************************************
