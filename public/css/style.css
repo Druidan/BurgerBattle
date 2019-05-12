@@ -5,7 +5,15 @@ CORE ROOT, DOM, AND GENERAL UTILITY CSS
 */
 
 :root {
-    /* We should probably set up some css variables for our color scheme and font families. I would recommend we use coolors.com to figure out a color scheme and google fonts for our fonts. */
+    --primary: #F3F3F3;
+    --secondary: #A50104;
+    --tertiary: #250001;
+    --highlight: #ffee02;
+    --highlight2: #ff9900;
+    --fontStandardColor: #FCBA04;
+    --font-title: 'Shojumaru', cursive;
+    --font-header: 'Ceviche One', cursive;
+    --font-body: 'Happy Monkey', cursive;
 }
 
 body {
@@ -102,6 +110,7 @@ header .overlay {
 h1 {
     text-align: center;
     color: rgb(131, 13, 13);
+    font-family: var(--font-title);
 }
 
 
@@ -154,6 +163,14 @@ body {
 button {
     color: #e9ec16;
     background-color: red;
+    height: 30px;
+    width: 50px;
+    font-family: var(--font-body);
+}
+
+p {
+    color: #A50104;
+    font-family: var(--font-body);
 }
 
 /* 
