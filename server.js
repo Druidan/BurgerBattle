@@ -16,7 +16,7 @@ app.use(express.static('public'));
 
 // Routes
 // =============================================================
-require('./routes/html-routes.js')(app);
+// require('./routes/html-routes.js')(app);
 require('./routes/api-routes.js')(app);
     //-------
     // WE CAN REPLACE THE ROUTE NAMES WITH WHATEVER ROUTE FILES WE MAKE

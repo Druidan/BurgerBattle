@@ -12,7 +12,7 @@ $(document).ready((getBurgerInfo) => {
     // queryURL is the url we'll use to query the API
 
     //insert url for burger display
-    const burgerDisplay = "/api/burgerRoster";
+    const burgerDisplay = "/api/burgerRoster/";
 
     // Begin building an object to contain our API call's query parameters
     // Set the API key
@@ -24,18 +24,50 @@ $(document).ready((getBurgerInfo) => {
       // masterLength = response.length;
       // Creating elements to hold the stuff  
     });
+
+
+    // $.get(burgerDisplay, (response) => {
+    //   burgerArray = response;
+    //   console.log(response)
+    // })
   };
 
+  getBurgerInfo()
 
   function burgerPopulate(burgerSide) {
+ 
     let burgerName = burgerArray[0].name;
     let burgerImg = burgerArray[0].picURL;
-    let burgerMeat = burgeryArray[0].Meats;
-    let burgerCondiments = burgerArray[0].Condiments;
-    let burgerBread = burgerArray[0].Breads;
-    let burgerCheese = burgerArray[0].Cheeses;
+
+    let meatArr = [];
+    const burgerMeat = burgerArray[0].Meats;
+    burgerMeat.forEach(meat => {
+      meatArr.push(meat.name);
+    })
+    const allMeat = meatArr.join(', ');
+
+    let condArr = [];
+    const burgerCondiments = burgerArray[0].Condiments;
+    burgerCondiments.forEach(cond => {
+      condArr.push(cond.name);
+    });
+    const allCondiments = condArr.join(', ');
+
+    let breadArr = [];
+    const burgerBread = burgerArray[0].Breads;
+    burgerBread.forEach(bread => {
+      breadArr.push(bread.name);
+    });
+    const allBread = breadArr.join(', ');
     burgerID = burgerArray[0].id;
 
+    if (burgerSide === "burgerLeft") {
+      leftID = burgerID;
+      // q(leftID)
+    } else if (burgerSide === "burgerRight") {
+      rightID = burgerID;
+      // q(rightID)
+    }
 
     const burgerDiv = $('<div class="card" id="' + burgerSide + '" style="width: 12rem;">');
 
@@ -45,7 +77,7 @@ $(document).ready((getBurgerInfo) => {
 
     const burgerTitle = $(`<h5 class="card-title">${burgerName}</h5>`);
     const burgerImage = $(`<img src=${burgerImg} class='card-img-top'>`);
-    const burgerDescription = $(`<p class="card-descrition">The ${burgerTitle} features a ${burgerMeat} patty on ${burgerBread}, topped with ${burgerCheese} and ${burgerCondiments}.</p>`);
+    const burgerDescription = $(`<p class="card-descrition">The ${burgerName} features ${allMeat} on ${allBread}, topped with ${allCondiments}.</p>`);
 
     // Appending the stuff
     burgerDiv.append(burgerImage);
@@ -54,15 +86,22 @@ $(document).ready((getBurgerInfo) => {
     burgerDiv.append(burgerDescription)
 
 
-
-    $("#burger-display").append(burgerDiv);
-  }
+    if (burgerSide === "burgerLeft") {
+      $("#burgerLeftDiv").append(burgerDiv);
+    } else if (burgerSide === "burgerRight") {
+      $("#burgerRightDiv").append(burgerDiv);
+    }
+    
+  };
 
   //initialize function
-  $(document).on("click", "#burgerBattle", burgerInitialize);
+  // $(document).on("click", "#burgerBattle", burgerInitialize);
 
+  $('#burgerBattle').click(() => {
+    burgerInitialize();
+  })
+ 
   function burgerInitialize() {
-
     burgerPopulate("burgerLeft");
     leftID = burgerID;
     burgerArray.shift();
@@ -72,10 +111,12 @@ $(document).ready((getBurgerInfo) => {
 
   }
 
-
+  $('#burgerLeftDiv').click(() => {
+    burgerLeftInitialize();
+  })
 
   //Left Click function
-  $(document).on("click", "#leftBurger", burgerLeftInitialize);
+  // $(document).on("click", "#leftBurger", burgerLeftInitialize);
 
   function burgerLeftInitialize() {
     //current burger needs a vote - current ID is leftID
@@ -86,39 +127,64 @@ $(document).ready((getBurgerInfo) => {
 
     // testScore = {1:0, 2:2, 3:0, 4:1};
 
-    if (leftID in burgerScore) {
-      burgerScore.leftID + 1;
-    } else {
-      burgerScore.leftID = 1;
-    }
-    if (burgerArray.length === 0) {
-      databaseCall();
-    } else {
-      burgerPopulate("burgerRight");
+    $("#burgerRightDiv").empty();
 
-      rightID = burgerID;
-      burgerArray.shift();
+    let chosenBurger = {}
+    chosenBurger[leftID] = 1;
+    // q(chosenBurger)
 
-    }
-  }
-  //Right Click function
-  $(document).on("click", "#rightBurger", burgerRightInitialize);
-
-  function burgerRightInitialize() {
-    if (rightID in burgerScore) {
-      burgerScore.rightID + 1;
+    if (burgerScore[leftID]) {
+      let currentScore = burgerScore[leftID];
+      currentScore++;
+      burgerScore[leftID] = currentScore;
+      q(burgerScore[leftID])
     } else {
-      burgerScore.rightID = 1;
+      $.extend( burgerScore, chosenBurger );
+      q(burgerScore[leftID])
     };
     if (burgerArray.length === 0) {
       databaseCall();
     } else {
+      burgerPopulate("burgerRight");
+      burgerArray.shift();
+    };
+
+  }
 
 
-      leftID = burgerID;
+  $('#burgerRightDiv').click(() => {
+    burgerRightInitialize();
+  })
+  // //Right Click function
+  // $(document).on("click", "#rightBurger", burgerRightInitialize);
+
+  function burgerRightInitialize() {
+
+    $("#burgerLeftDiv").empty(); 
+
+
+    // if (burgerScore.includes(rightID)) {
+    //   burgerScore.rightID + 1;
+    // } else burgerScore.rightID = 1;
+
+    let chosenBurger = {}
+    chosenBurger[rightID] = 1;
+    // q(chosenBurger)
+
+    if (burgerScore[rightID]) {
+      let currentScore = burgerScore[rightID];
+      currentScore++;
+      burgerScore[rightID] = currentScore;
+      q(burgerScore[rightID])
+    } else {
+      $.extend( burgerScore, chosenBurger );
+      q(burgerScore[rightID])
+    };
+    if (burgerArray.length === 0) {
+      databaseCall();
+    } else {
       burgerPopulate("burgerLeft");
       burgerArray.shift();
-
     };
   }
   //Maybe a for loop not the most efficient way
@@ -126,10 +192,11 @@ $(document).ready((getBurgerInfo) => {
   //Api sends back burger stats in the res.json
 
   function databaseCall() {
-    const burgerDisplay = "/api/burgerRoster";
+    q(burgerScore);
+    const burgerDisplay = '/api/burgerRoster';
     $.ajax({
       url: burgerDisplay,
-      method: "POST",
+      method: "PUT",
       data: burgerScore
     }).then(function (response) {
       //how to add score to that burger's ID

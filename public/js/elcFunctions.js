@@ -24,3 +24,8 @@ function removeClass (el, className) {
         el.className = el.className.replace(reg, ' ')
     }
 }
+
+function q (check) {
+    console.log(`This ${typeof check} has a value of:`);
+    console.log(check)
+}
