@@ -30,7 +30,7 @@ module.exports = {
     }, {
       name: 'The Loaded Angus Steakhouse Burger',
       specialNotes: null,
-      picURL: '',
+      picURL: './assets/images/loadedsteakhouseburger.gif',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -54,7 +54,7 @@ module.exports = {
     }, {
       name: 'Australasian Burger',
       specialNotes: null,
-      picURL: './assets/images/aussieburger.jpg',
+      picURL: './assets/images/aussieburger.jpeg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -162,7 +162,7 @@ module.exports = {
     }, {
       name: 'Veggie Burger',
       specialNotes: null,
-      picURL: './assets/images/lutherburger.jpg',
+      picURL: './assets/images/veggie.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {

@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "",
+        "password": "4HorseN4m3dJ1m!",
         "logging": true,
         "database": "burgerRoster",
         "host": "localhost",
