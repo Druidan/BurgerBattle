@@ -3,40 +3,40 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
 
-      return queryInterface.bulkInsert('Breads', [{
-        name: 'Standard Hamburger Bun',
+      return queryInterface.bulkInsert('Breads', [{ // 1
+        name: 'Standard hamburger bun',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },{
-        name: 'White Brioche Bun',
+      },{ // 2
+        name: 'White brioche bun',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },{
-        name: 'Seasame Seed Bun',
+      },{ // 3
+        name: 'Seasame seed bun',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },{
-        name: 'Hamdog Shaped Bun',
+      },{ // 4
+        name: 'Hamdog shaped bun',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },{
-        name: 'Grilled Bun',
+      },{ // 5
+        name: 'Grilled bun',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },{
-        name: 'Compressed Rice Cake',
+      },{ // 6
+        name: 'Compressed rice cake',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },{
-        name: 'Sliced Doghnut',
+      },{ // 7
+        name: 'Sliced donut',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },{
-        name: 'Naan Bread',
+      },{ // 8
+        name: 'Naan bread',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },{
-        name: 'Sliced Bread Roll',
+      },{ // 9
+        name: 'Sliced bread roll',
         createdAt: new Date(),
         updatedAt: new Date(),
       },], {});

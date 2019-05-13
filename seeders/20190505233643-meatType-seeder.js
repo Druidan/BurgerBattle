@@ -3,29 +3,28 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
 
-      return queryInterface.bulkInsert('Meats', [{
-        // 1
-        name: '50/50 Burger Patty, half ground beef and half ground bacon.',
+      return queryInterface.bulkInsert('Meats', [{ // 1
+        name: '50/50 burger patty (half ground beef and half ground bacon)',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 2
-        name: '50/50 Kangaroo Patty, half ground beef and half ground kangaroo meat.',
+        name: '50/50 kangaroo patty (half ground beef and half ground kangaroo meat)',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 3
-        name: 'Angus Beef Patty',
+        name: 'Angus beef patty',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 4
-        name: 'Ground Beef Patty',
+        name: 'Ground beef patty',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 5
-        name: 'Ground Buffalo Meat Patty',
+        name: 'Ground buffalo meat patty',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 6
-        name: 'Slugburger Patty, ground beef or pork with soy grits.',
+        name: 'Slugburger patty (ground beef or pork with soy grits)',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 7
@@ -37,35 +36,35 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 9
-        name: 'Tuna Mix',
+        name: 'Tuna mix',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 10
-        name: 'Impossible Burger Patty',
+        name: 'Impossible burger patty',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 11
-        name: 'Tofu Burger Patty',
+        name: 'Tofu burger patty',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 12
-        name: 'Split Beef Patty with a Frankfurter Placed Between the Halves',
+        name: 'Split beef patty with a frankfurter placed between the halves',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 13
-        name: 'bacon',
+        name: 'Bacon',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 14
-        name: 'ground chicken patty',
+        name: 'Ground chicken patty',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 15
-        name: 'ground lamb patty',
+        name: 'Ground lamb patty',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 16
-        name: 'ground, sliced, or minced beef steak',
+        name: 'Ground, sliced, or minced beef steak',
         createdAt: new Date(),
         updatedAt: new Date(),
       },], {});
@@ -73,6 +72,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-      // return queryInterface.bulkDelete('Meat', null, {});
+      // return queryInterface.bulkDelete('meat', null, {});
   }
 };

@@ -1,34 +1,35 @@
 'use strict';
 
-module.exports = {
-  up: (queryInterface, Sequelize) => {
+//
 
+module.exports = {
+  up: (queryInterface, Sequelize) => { 
       return queryInterface.bulkInsert('Condiments', [{ // 1
-        name: 'sunny side up egg', 
+        name: 'Sunny side up egg', 
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 2
-        name: 'avocados sliced or mashed / guacamole',
+        name: 'Avocados (sliced, mashed, or guacamole)',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 3
-        name: 'pepper jack cheese',
+        name: 'Pepper jack cheese',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 4
-        name: 'chipotle adobo mayo',
+        name: 'Chipotle adobo mayo',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 5
-        name: 'lettuce',
+        name: 'Lettuce',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 6
-        name: 'mayonaise',
+        name: 'Mayonaise',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 7
-        name: 'fried onions',
+        name: 'Fried onions',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 8
@@ -40,47 +41,47 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ //10
-        name: 'tomato slices',
+        name: 'Tomato slices',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 11
-        name: 'mashed baked potatoes',
+        name: 'Mashed baked potatoes',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 12
-        name: 'grilled onions',
+        name: 'Grilled onions',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 13
-        name: 'beetroot',
+        name: 'Beetroot',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 14
-        name: 'pineapple slices',
+        name: 'Pineapple slices',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 15
-        name: 'fried egg',
+        name: 'Fried egg',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 16
-        name: 'pickles',
+        name: 'Pickles',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 17
-        name: 'onion',
+        name: 'Onion',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 18 
-        name: 'ketchup',
+        name: 'Ketchup',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 19
-        name: 'mustard',
+        name: 'Mustard',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 20 
-        name: 'cheddar cheese',
+        name: 'Cheddar cheese',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 21 
@@ -88,79 +89,79 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 22
-        name: 'mozzarella cheese',
+        name: 'Mozzarella cheese',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 23
-        name: 'blue Cheese',
+        name: 'Blue Cheese',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 24
-        name: 'bbq sauce',
+        name: 'BBQ sauce',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 25
-        name: 'gravy',
+        name: 'Gravy',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 26
-        name: 'remoulade',
+        name: 'Remoulade',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 27
-        name: 'butter',
+        name: 'Butter',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 28
-        name: 'chili',
+        name: 'Chili',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 29 
-        name: 'cole slaw',
+        name: 'Cole slaw',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 30
-        name: 'yogurt',
+        name: 'Greek yogurt',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 31
-        name: 'green peppers',
+        name: 'Green peppers',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 32
-        name: 'french fries',
+        name: 'French fries',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 33
-        name: 'teriyaki sauce',
+        name: 'Teriyaki sauce',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 34
-        name: 'kimchi',
+        name: 'Kimchi',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 35
-        name: 'red or green chili sauce',
+        name: 'Red or green chili sauce',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 36
-        name: 'mushrooms',
+        name: 'Mushrooms',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 37
-        name: 'curry powder',
+        name: 'Curry powder',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 38
-        name: 'sliced bell pepper',
+        name: 'Sliced bell pepper',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 39
-        name: 'provolone cheese',
+        name: 'Provolone cheese',
         createdAt: new Date(),
         updatedAt: new Date(),
       },{ // 40
-        name: 'cilantro',
+        name: 'Cilantro',
         createdAt: new Date(),
         updatedAt: new Date(),
       }], {});
