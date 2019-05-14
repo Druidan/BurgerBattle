@@ -4,6 +4,8 @@ $(document).ready((getBurgerInfo) => {
   let leftID = 0;
   let rightID = 0;
   let burgerID = 0;
+  let battleOn = false;
+  let animating = false;
 
   // Create sound objects
   const punch = new Sound('../assets/sounds/attack.mp3');
@@ -186,6 +188,7 @@ $(document).ready((getBurgerInfo) => {
   };
 
   function populateTable(finalScores) {
+    battleOn = false;
     finalScoreTable = getElementbyId('finalScoreTable');
     for (let i = finalScores.length; i > 0; i--) {
       finalScoreTable.append(
@@ -201,16 +204,31 @@ $(document).ready((getBurgerInfo) => {
 // All Click Event Handlers: ************************
 
 $('#burgerBattle').click(() => {
-  burgerInitialize();
+  if (!battleOn && !animating){
+    burgerInitialize();
+    battleOn = true;
+  } else {
+    console.log('No clicky.')
+  }
+
 })
 
 $('#burgerLeftDiv').click(() => {
-  animateFight ('leftDiv');
+  if (battleOn && !animating){
+    animateFight ('leftDiv');
+  } else {
+    console.log('No clicky.')
+  }
 
 })
 
 $('#burgerRightDiv').click(() => {
-  animateFight ('rightDiv');
+  if (battleOn && !animating){
+    animateFight ('rightDiv');
+  } else {
+    console.log('No clicky.')
+  }
+
 })
 
 //***************************************************
@@ -218,6 +236,7 @@ $('#burgerRightDiv').click(() => {
 // Animation Functions: *****************************
 
 function animateFight (div) {
+  animating = true;
   $('.cartoonFightDiv').addClass('fightDiv');
   $('.cartoonFightCloud').addClass('fight');
   $('#burgerLeft').addClass('leftBurgerSmash');
@@ -236,7 +255,8 @@ function animateFight (div) {
     } else if (div === 'rightDiv') {
       burgerRightInitialize();
     } else { console.log('Animation div error! check the input to the animateFight function!')}
-  }, 2000)
+    animating = false;
+  }, 1100);
 }
 
 //***************************************************
