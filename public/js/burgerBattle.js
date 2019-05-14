@@ -5,6 +5,10 @@ $(document).ready((getBurgerInfo) => {
   let rightID = 0;
   let burgerID = 0;
 
+  // Create sound objects
+  const punch = new Sound('../assets/sounds/attack.mp3');
+  const punches = new Sound('../assets/sounds/punches.mp3')
+
   // This function grabs all of our burger data from the database and stores it in the burgerArray variable.
   function getBurgerInfo() {
 
@@ -72,7 +76,7 @@ $(document).ready((getBurgerInfo) => {
     }
 
     // Establish the div that will have the incoming data appended to.
-    const burgerDiv = $(`<div class="card" id="${burgerSide}" style="width: 12rem;">`);
+    const burgerDiv = $(`<div class="card ${burgerSide}" id="${burgerSide}" style="width: 12rem;">`);
     const burgerTextWrapper1 = $('<div class="card-body text-center">');
 
     // Establish interior elements of the card incorporating the burger data.
@@ -179,12 +183,39 @@ $('#burgerBattle').click(() => {
 })
 
 $('#burgerLeftDiv').click(() => {
-  burgerLeftInitialize();
+  animateFight ('leftDiv');
+
 })
 
 $('#burgerRightDiv').click(() => {
-  burgerRightInitialize();
+  animateFight ('rightDiv');
 })
+
+//***************************************************
+
+// Animation Functions: *****************************
+
+function animateFight (div) {
+  $('.cartoonFightDiv').addClass('fightDiv');
+  $('.cartoonFightCloud').addClass('fight');
+  $('#burgerLeft').addClass('leftBurgerSmash');
+  $('#burgerRight').addClass('rightBurgerSmash');
+  punch.play();
+  punches.play();
+  setTimeout(() => { 
+      $('.cartoonFightDiv').removeClass('fightDiv');
+      $('.cartoonFightCloud').removeClass('fight');
+      $('#burgerLeft').removeClass('leftBurgerSmash');
+      $('#burgerRight').removeClass('rightBurgerSmash');
+  }, 1000)
+  setTimeout(() => {
+    if (div === 'leftDiv') {
+      burgerLeftInitialize();
+    } else if (div === 'rightDiv') {
+      burgerRightInitialize();
+    } else { console.log('Animation div error! check the input to the animateFight function!')}
+  }, 2000)
+}
 
 //***************************************************
 

@@ -1,6 +1,6 @@
 
 // This file holds utility functions we can use if we do vanilla js to do similar things to jQuery. If we use jQuery we can delete this file.
-    
+
 function hasClass (el, className) {
     if (el.classList)
         return el.classList.contains(className)

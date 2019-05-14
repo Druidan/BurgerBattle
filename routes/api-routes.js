@@ -68,6 +68,7 @@ module.exports = function (app) {
           })
         })
         .then((upData) => {
+          res.json('Sucess!')
           console.log("The deed is done, sire.")
         });
 

@@ -1,5 +1,6 @@
 'use strict';
 
+// This seeder file populates the join table for burgers and condiments
 module.exports = {
     up: (queryInterface, Sequelize) => {
 
