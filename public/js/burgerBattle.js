@@ -172,9 +172,31 @@ $(document).ready((getBurgerInfo) => {
       url: burgerDisplay,
       method: "PUT",
       data: burgerScore
-    }).then(function (response) {
+    }).then((err, response) => {
+      $.ajax({
+        url: burgerDisplay,
+        method: 'GET',
+      }).then((res) => {
+        console.log(res);
+        finalScores = res;
+        populateTable();
+      });
+      // scorePopulate();
     });
   };
+
+  function populateTable(finalScores) {
+    finalScoreTable = getElementbyId('finalScoreTable');
+    for (let i = finalScores.length; i > 0; i--) {
+      finalScoreTable.append(
+        `<tr>
+      <td>${finalScores[i].name}</td>
+      <td>${finalScores[i].score}</td>
+      </tr>`,
+      );
+    }
+  }
+
 
 // All Click Event Handlers: ************************
 

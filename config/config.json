@@ -1,9 +1,9 @@
 {
     "development": {
-        "username": "mhl6xsu33vc8lnxj",
-        "password": "m9emvfefd5q2jfv9",
-        "database": "b7iqwrnge46se78r",
-        "host": "xefi550t7t6tjn36.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "username": "root",
+        "password": "4H0rseN4m3dJ1m!",
+        "database": "burgerRoster",
+        "host": "localhost",
         "port": 3306,
         "dialect": "mysql"
     },
@@ -16,6 +16,7 @@
         "dialect": "mysql"
     },
     "production": {
+        "use_env_variable": "JAWSDB_URL",
         "username": "mhl6xsu33vc8lnxj",
         "password": "m9emvfefd5q2jfv9",
         "database": "b7iqwrnge46se78r",
