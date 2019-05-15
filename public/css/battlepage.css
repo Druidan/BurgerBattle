@@ -23,9 +23,13 @@ body {
     --font-body: 'Happy Monkey', cursive;
 }
 
+.buryIt {
+    display: none !important;
+}
+
 .card-body {
-    background: #A50104;
-    color: #ff9900;
+    background: var(--secondary);
+    color: var(--highlight2);
 }
 
 .burgerDiv {
@@ -34,17 +38,79 @@ body {
 }
 
 .test {
-    color: #ff9900;
+    color: var(--highlight2);
     font-family: var(--standardFontFamily);
 }
 
 .burger-battle-title {
+    padding-bottom: 15px;
     font-family: var(--font-title);
 }
 
 .battle-discription {
     font-family: var(--font-body);
+    font-size: 25px;
+}
+
+.app-discription {
+    font-family: var(--font-body);
     font-size: 20px;
+}
+
+.button-start {
+    background: #ebb607;
+    width: 100px;
+    height: 40px;
+    padding: 4px 0;
+    transform: translateX(-10%) translateY(-10%);
+    border-radius: 3px;
+    font-family: var(--font-title);
+    font-size: 20px;
+}
+    .button-words {
+        font-family: var(--font-title);
+        font-size: 20px; 
+        text-align: center;
+        text-transform: uppercase;
+        color: rgb(92, 5, 5);
+        user-select: none;
+    }
+
+button:hover {
+    cursor: pointer;
+}
+
+.test1 {
+    display: table-cell;
+    vertical-align: top;
+
+}
+
+.card-1 {
+    text-align: left;
+    font-family: var(--font-body); 
+    font-size: 15px;
+    display: block;
+    vertical-align: top;
+    width: 100%;
+    
+}
+
+.card-2 {
+    text-align: left;
+    font-family: var(--font-body); 
+    font-size: 15px;
+    display: block;
+    vertical-align: top;
+    width: 100%;
+}
+
+#burgerLeftDiv {
+    width: 100%;
+}
+
+#burgerRightDiv {
+    width: 100%;
 }
 
 /* Cartoon Fight Cloud CSS and Animation */
@@ -82,6 +148,7 @@ body {
 /* Smashing Burgers Animation CSS*/
 
 .burgerLeft {
+    width: 100% !important;
     -webkit-transition: margin-left 1s, transform .25s; /* Safari */
     transition: margin-left 1s, transform .25s;
 }
@@ -92,6 +159,7 @@ body {
 }
 
 .burgerRight { 
+    width: 100% !important;
     -webkit-transition: margin-right 1s, transform .25s; /* Safari */
     transition: margin-right 1s, transform .25s;
 }

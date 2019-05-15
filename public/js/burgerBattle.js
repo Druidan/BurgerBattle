@@ -7,6 +7,8 @@ $(document).ready((getBurgerInfo) => {
   let battleOn = false;
   let animating = false;
 
+  const finalRanking = '<div class="rankings" id="finalScoreDiv"> <ol class="ranking"></ol></div>'
+
   // Create sound objects
   const punch = new Sound('../assets/sounds/attack.mp3');
   const punches = new Sound('../assets/sounds/punches.mp3')
@@ -103,6 +105,11 @@ $(document).ready((getBurgerInfo) => {
 
   //This starting function populates both empty divs, establishes starting ids, and removes the data from the burgerArray.
   function burgerInitialize() {
+    $('.card-1').removeClass('buryIt');
+    $('.card-2').removeClass('buryIt');
+    $('.battle-discription').addClass('buryIt');
+    $('.app-discription').addClass('buryIt');
+    $('.button-start').addClass('buryIt');
     burgerPopulate("burgerLeft");
     leftID = burgerID;
     burgerArray.shift();
@@ -133,6 +140,8 @@ $(document).ready((getBurgerInfo) => {
     // If there are no more burgers in the burgerArray to select from, update the database with the new scores, otherwise populate the next challenger burger div and remove it from the array.
     if (burgerArray.length === 0) {
       databaseCall();
+      $('.card-2').addClass('buryIt');
+      $('.rightDiv').append(finalRanking);
     } else {
       burgerPopulate("burgerRight");
       burgerArray.shift();
@@ -161,6 +170,8 @@ $(document).ready((getBurgerInfo) => {
     // If there are no more burgers in the burgerArray to select from, update the database with the new scores, otherwise populate the next challenger burger div and remove it from the array.
     if (burgerArray.length === 0) {
       databaseCall();
+      $('.card-1').addClass('buryIt');
+      $('.leftDiv').append(finalRanking);
     } else {
       burgerPopulate("burgerLeft");
       burgerArray.shift();
@@ -181,23 +192,21 @@ $(document).ready((getBurgerInfo) => {
       }).then((res) => {
         console.log(res);
         finalScores = res;
-        populateTable();
+        populateTable(finalScores);
       });
       // scorePopulate();
     });
   };
 
   function populateTable(finalScores) {
-    battleOn = false;
-    finalScoreTable = getElementbyId('finalScoreTable');
-    for (let i = finalScores.length; i > 0; i--) {
-      finalScoreTable.append(
-        `<tr>
-      <td>${finalScores[i].name}</td>
-      <td>${finalScores[i].score}</td>
-      </tr>`,
-      );
-    }
+    finalScoreTable = $('.ranking');
+    let i = objectLength(finalScores);
+    finalScores.forEach(burger => {
+      q(burger)
+      i--
+      const rankLi = $(`<li class="rankItem" id="rank${i}"> ${burger.name}</li>`);
+      finalScoreTable.prepend(rankLi);
+    })
   }
 
 

@@ -26,6 +26,10 @@ function removeClass (el, className) {
 }
 
 function q (check) {
-    console.log(`This ${typeof check} has a value of:`);
+    console.log(`Q = This ${typeof check} has a value of:`);
     console.log(check)
+}
+
+function objectLength (object) {
+    return Object.keys(object).length;
 }
