@@ -200,6 +200,7 @@ $(document).ready((getBurgerInfo) => {
 
   function populateTable(finalScores) {
     battleOn = false;
+    $('.restart').removeClass('buryIt');
     finalScoreTable = $('.ranking');
     let i = objectLength(finalScores);
     finalScores.forEach(burger => {
@@ -220,7 +221,6 @@ $('#burgerBattle').click(() => {
   } else {
     console.log('No clicky.')
   }
-
 })
 
 $('#burgerLeftDiv').click(() => {
@@ -229,7 +229,6 @@ $('#burgerLeftDiv').click(() => {
   } else {
     console.log('No clicky.')
   }
-
 })
 
 $('#burgerRightDiv').click(() => {
@@ -238,7 +237,14 @@ $('#burgerRightDiv').click(() => {
   } else {
     console.log('No clicky.')
   }
+})
 
+$('#fightAgain').click(() => {
+  if (!battleOn && !animating){
+    window.location.reload(true);
+  } else {
+    console.log('No clicky.')
+  }
 })
 
 //***************************************************
