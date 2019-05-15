@@ -11,6 +11,14 @@ body {
     font-family: var(--standardFontFamily);
 }
 
+ol {
+    font-family: var(--standardFontFamily);
+}
+
+li {
+    font-family: var(--standardFontFamily);
+}
+
 :root {
     --primary: #F3F3F3;
     --secondary: #A50104;
@@ -111,6 +119,10 @@ button:hover {
 
 #burgerRightDiv {
     width: 100%;
+}
+
+#fightAgain {
+    margin-bottom: 15px;
 }
 
 /* Cartoon Fight Cloud CSS and Animation */
