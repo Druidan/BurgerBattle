@@ -199,6 +199,7 @@ $(document).ready((getBurgerInfo) => {
   };
 
   function populateTable(finalScores) {
+    battleOn = false;
     finalScoreTable = $('.ranking');
     let i = objectLength(finalScores);
     finalScores.forEach(burger => {
