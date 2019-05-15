@@ -7,7 +7,7 @@ $(document).ready((getBurgerInfo) => {
   let battleOn = false;
   let animating = false;
 
-  const finalRanking = '<div class="rankings" id="finalScoreDiv"> <ol class="ranking"></ol></div>'
+  const finalRanking = '<div class="rankings" id="finalScoreDiv"> <h2>All Time Ranking</h2> <ol class="ranking"></ol></div>'
 
   // Create sound objects
   const punch = new Sound('../assets/sounds/attack.mp3');
@@ -204,7 +204,6 @@ $(document).ready((getBurgerInfo) => {
     finalScoreTable = $('.ranking');
     let i = objectLength(finalScores);
     finalScores.forEach(burger => {
-      q(burger)
       i--
       const rankLi = $(`<li class="rankItem" id="rank${i}"> ${burger.name}</li>`);
       finalScoreTable.prepend(rankLi);
