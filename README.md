@@ -5,10 +5,10 @@ Have you ever had a hard time choosing which burger you wanted to eat? Yeah, tha
 Welcome to Burger Battle! Choose your favorite burger by pitting one burger against another in a struggle for the title of Buger Battle Champion!
 
 ## Overview and Goals
-
+This app will allow users to choose their preferences between different burgers in a tournament to narrow down and select their favorite burger at a given point in time, and then compare their ultimate choice to the final rankings of the burgers against their all-time scores populated by all users.
 
 ## Deployment
-_Where we will be deployed - probably Heroku, but maybe Zeit if that works for our "new tech"_
+We are currently deployed on Heroku! - [Burger Battle!](https://burgerbattle.herokuapp.com/)
 
 ## MVP
 As our app is run, it must be able to do the following:
