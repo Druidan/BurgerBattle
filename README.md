@@ -1,3 +1,4 @@
+![Burger Battle](./public/assets/images/BurgerBattle.png)
 # Burger Battle
 Have you ever had a hard time choosing which burger you wanted to eat? Yeah, that's normal. Ever wanted to smash two burgers against eachother and see which one comes out on top? Well, that's not quite normal, per se, but we're here to meet that demand!
 
